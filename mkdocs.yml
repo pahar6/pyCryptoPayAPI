@@ -1,0 +1,105 @@
+site_name: pyCryptoPay-SDK Documentation
+repo_url: https://github.com/LulzLoL231/pyCryptoPayAPI
+repo_name: LulzLoL231/pyCryptoPayAPI
+edit_uri: edit/master/docs/
+copyright: Copyright &copy; 2023 Maxim Mosin
+
+nav:
+  - Главная: 'index.md'
+  - Установка: 'install.md'
+  - Получение API токена: 'get_token.md'
+  - Примеры:
+    - Получение объекта приложения: 'examples/get_me.md'
+    - Использование тестовой сети: 'examples/testnet_usage.md'
+    - Отправка криптовалюты: 'examples/transfer_usage.md'
+    - Вебхук: 'examples/webhook_example.md'
+  - API:
+    - CryptoPay: 'API/CryptoPayAPI/index.md'
+    - Схемы: 'API/CryptoPayAPI/schemas.md'
+    - Исключения: 'API/CryptoPayAPI/errors.md'
+  - Помощь:
+    - Сообщить о багах: 'https://github.com/LulzLoL231/pyCryptoPayAPI/issues'
+    - Документация CryptoPay API: 'https://help.crypt.bot/crypto-pay-api'
+
+theme:
+  name: material
+  language: ru
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - git-committers:
+      repository: LulzLoL231/pyCryptoPayAPI
+  - git-authors
+  - search
+  - mkdocstrings
+  - glightbox
+  - i18n:
+      default_language: ru
+      docs_structure: suffix
+      material_alternate: true
+      languages:
+        en:
+          name: English
+          site_name: pyCryptoPay-SDK Documentation
+          homepage: ./en/
+        ru:
+          name: Русский
+          site_name: Документация pyCryptoPay-SDK
+          homepage: ./ru/
+      nav_translations:
+        en:
+          Главная: Home
+          Установка: Install
+          Получение API токена: Get API token
+          Примеры: Examples
+          Получение объекта приложения: Get application
+          Использование тестовой сети: Use testnet
+          Отправка криптовалюты: Transfer crypto
+          Вебхук: Webhook
+          CryptoPay: CryptoPay
+          Классы ошибок: Errors
+          Схемы: Schemas
+          Помощь: Help
+          Сообщить о багах: Issue tracker
+          Документация CryptoPay API: CryptoPay API Docs
+
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - section-index
+
+extra:
+  social:
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/pycryptopay-sdk/
+      name: Project on PYPI
+    - icon: fontawesome/brands/github
+      link: https://github.com/LulzLoL231
+      name: Author GitHub
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
